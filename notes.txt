@@ -1,0 +1,377 @@
+DP-900: Microsoft Azure Data Fundamentals
+Core Data Concepts
+Relational Data in Azure
+Non-Relational Data in Azure
+Data Security and Compliance
+Data Processing and Analytics
+DP-203: Data Engineering on Microsoft Azure
+Data Ingestion and Storage
+Data Processing and Transformation
+Data Security and Compliance
+Data Governance and Quality
+Data Analytics and Visualization
+Azure Data Engineering Concepts
+Data Ingestion: Azure Data Factory (ADF), Azure Synapse Analytics, Azure Databricks, Event Grid, Event Hubs.
+Data Storage: Azure Blob Storage, Azure Data Lake Storage (ADLS) Gen2, Azure Files, Azure Queues.
+Data Processing: Azure Databricks, Azure Synapse Analytics, Azure Functions, Azure Batch.
+Data Transformation: Azure Data Factory (ADF), Azure Databricks, Azure Synapse Analytics.
+Data Security: Azure Active Directory (AAD), Azure Role-Based Access Control (RBAC), Azure Key Vault.
+Data Governance: Azure Purview, Azure Data Catalog.
+Data Analytics: Azure Synapse Analytics, Azure Databricks, Power BI.
+Here are the main topic headings for the Azure certifications you mentioned:
+
+
+
+--------------------------------------------------------------------
+What is cloud computing ?
+-> is the delivery of computing services over the internet. These services can
+    include servers, storage, databases, software, analytics and intelligence.
+
+Cloud computing charateristics:-
+-> on demand self-service, broad network access, resource pooling, elasticity
+
+
+Cloud deployment models
+->  Public Cloud:-
+        - owned and operated by a third party provider as AWS, Azure
+    
+    Private Cloud:-
+        - owned and operated by a single organization, typically for their own use.
+
+    Hybrid Cloud:-
+        - a cloud environment that combines public and private cloud services,
+          allowing data and applications to be shared between them.
+
+
+Cloud Computing benefits
+-> cost saving, increased agility, improved scalability, enhanced reliability, better Security
+
+
+Storage Account:-
+    - is a container in Azure that holds your data objects, such as blobs, files, queues and tables.
+    - used to store and manage data in a secure, durable and scalable way
+
+    Types of Storage accounts:
+        - General purpose v2(GPv2)
+            - most commonly used storage account type. It support blobs, files, queues, tables
+
+        - General purpose v1(GPv1)
+            - is an older storage account type that's still supported for legacy applications
+
+        - Blob storage
+            - optimized for storing large amounts of unstructured data, such as images, videos and documents.
+
+        - File storage
+            - optimized for storing and sharing files such as documents, images and videos by NFS and SMB protocol
+
+        - Block blob storage
+            - optimized for storing large amounts of unstructured data, images, videos and documents.
+
+    
+    Storage account components
+        - Containers
+            - are used to store blobs, files and other objects.
+        
+        - blobs (binary large object)
+            - are unstructured data objects, 
+        
+        - files
+            - are structured data objects,
+
+        - queues
+            - are used to store and process messages asynchronous
+
+        - tables
+            - are used to store structured data, such as key-value pairs
+        
+    
+    Storage account Features
+        - data redundancy, encryption, access control, data tiering
+
+    
+    Azure storage tiers
+        -> hot , cool, cold, archive
+
+    
+    Azure availability zone
+        - availability zone
+            - is a physically separate location within a region that provides high availability and redundancy
+
+        - zone-redundant storage
+            - it replicates data across multiple availability zones, providing high availability and redundancy.
+
+    
+    Azure Storage Replication
+        - Locally Redundant Storage(LRS)
+            - replicates your data within a single datacenter in a single region. data is replicated 3 times 
+                within the same datacenter.
+            - PROS:- low cost, high performance and low latency
+            - Cons:- data is not protected against datacenter-level failures
+
+        - Zone Redundant Storage(ZRS)
+            - replicates your data across multiple availability zones within a single region.
+                data is replicated 3 times across different availability zones.
+            - PROS:- protects against datacenter-level failures, high availability, and low latency
+            - CONS:- high cost compared to LRS
+
+        - Geo-Redundant Storage(GRS)
+            - replicates data across multiple regions, data is replicated 3 times within the primary region and 
+                3 times within the secondary region.
+            - PROS:- protects against regional-level failures, high availability and low latency
+            - CONS:- higher cost compared to LRS, ZRS and potential for higher latency.
+
+        - Geo-Zone Redundant Storage(GZRS)
+            - combines the benefits of ZRS and GRS, it replicates your data across multiple availability zones 
+                within the primary region and across multiple region.
+            - PROS:- protects against datacenter-level and regional-level failures, high availability and low 
+                latency
+            - CONS:- highest cost among all replication options.
+    
+
+    Steps to create azure storage account:-
+        - login to azure portal
+        - create a resource group
+        - create a storage account
+        - create a container
+
+    
+    What is azure data lake storage ?
+    -> is a cloud based repository that allows you to store and manage large amounts of structured and 
+        unstructured data. designed to handle big data analytics, machine learning and data science workloads.
+
+        Key Features
+            - scalability, flexibility, security, performance, integration
+
+    What is azure data lake storage Gen2 ?
+    -> is the latest version of azure data lake storage, offers several improvements
+        -> hierarchical namespcace, high performance storage, cost effective
+
+    Data lakes storage use cases
+    -> data warehousing, big data analytics, machine learning, data science
+
+
+
+Virtual Machines (IaaS)
+    - is a virtualized computer running in the azure cloud.
+    - is a software emulation of a physical computer, providing a flexiable and scalable way to deploy
+        and manage virtual machines in the cloud.
+    
+    benefits
+        -> scalability, cost effective, flexibility, security
+
+    Azure vm sizes:-
+        -> A, D, F, G, H, L
+
+    VM components in azure
+    ->  - virtual machine (vm)
+        - virtual network (vnet)
+        - subnet
+        - network interface (nic)
+        - public IP address
+        - resource group
+
+
+Azure Database Services
+    - Azure SQL Database, Cosmos DB, Database for MySQL, Database for MariaDB, postrgre SQL
+
+    - Azure SQL Database
+        - fully managed relational database service that provides a scalable and secure database solution
+        - automatic patching, backups, and scaling
+        - provides a scalable and secure database solution that is fully managed by azure
+    
+    - Azure Cosmos DB
+        - a globally distributed, multi-model database service that provides a scalable and performt database 
+            solution
+        - provides a range of features, including global distribution, automatic scaling and multiple data 
+            models
+        - provides a scalable and performant database solution that is globally distributed and fully managed 
+            by azure
+
+    - Azure Database for MySQL, PostgreSQL, MariaDB
+        - fully managed relational database service that provide scalable and secure database
+            solution
+        - fully managed by azure
+
+    
+    Relational Database:-
+        -> are traditional databases that store data in tables with well defined schemas. each table has rows 
+            and columns and each column has a specific data type
+        -> fixed schema, tables, sql, acid compliance
+        -> Azure SQL, Azure DB for MySQL, Azure DB for PostgreSQL
+        -> transactional systems, structured data, complex queries.
+
+    Non-Relational databases
+        -> also known as NoSQL databases, are designed to handle large amounts of unstructured or semi-structured
+             data.
+        -> flexible schema, key-value doc, no-sql query language, high scalability
+        -> azure cosmos DB, azure table storage, azure blob storage
+        -> big-data, unstructured or semi-structured data, real-time web applications
+
+
+    Database
+        - is a collection of organized data that is stored in a way that allows for efficient retrieval and 
+            manipulation.
+        - structured data, schema-on-write, ACID compliance
+
+    Datawarehouse
+        - is a centralized repository that stores data from various sources in a single location, making it 
+            easier to analyze and report on the data.
+        - integrated data, structured data, schema-on-write, optimized for analytics
+
+    Data Lake
+        - is a centralized repository that stores raw, unprocessed data in its native format.
+        - raw, unprocessed data, schema-on-read, flexible data structure, optimized for big data
+
+    Some imp port numbers
+        - MySQL      -> 3306
+        - PostgreSQL -> 5432
+        - Microsoft SQL Server -> 1433
+        - Oracle      -> 1521
+        - IBM DB2     -> 50000
+        - MongoDB     -> 27017
+        - Cassandra   -> 9042
+
+
+Azure Data Factory -> cloud based data integration service
+    - is a cloud based data integration service that allows you to create schedule, and manage
+      your data piepline across different sources and destinations.
+    - enabling you to integrate, transform, and analyze your data in a scalable, secure and reliable manner.
+
+    - data integration, data Transformation, data movement, scheduling and monitoring, security and compliance
+
+    components of Azure Data Factory
+        - pipeline, activities, datasets, linked services, integration runtime
+
+
+    Resource group
+        |
+        |--- Data Factory
+        |       |
+        |       |---pipelines
+        |       |       |
+        |       |       |--Activities
+        |       |       |       |
+        |       |       |       |--Datasets
+        |       |       |       |--Linked Services
+        |       |--Integration Runtime
+    
+Azure Cosmos DB
+    - a globally distributed, multi-model database service
+    - is a cloud based nosql database service that provides a globally distributed, multi-model
+        database for building modern applications.
+    - Cosmos db supports multiple data models -> documentDB, Graph, Key-Value, Column-Family
+    - Request Units are a measure of the throughput of a Cosmos DB container.
+    - Data Partitioning is a technique used to distribute data across multiple servers to improve scalability
+        and performance. Cosmos DB provides automatic data Partitioning which allows you to scal your database 
+        horizontally.
+
+Dedicated pool
+    - is a provisioned throughput model where you reserve a specific amount of request units for your database.
+    - this model is suitable for workloads with predictable traffic patterns.
+
+    - provisioned throughput, predictable cost, high performance, scalability
+
+
+Serverless Pool
+    - is a consumption based model where you pay only for the RUs consumed by your database.
+    - is suitable for workloads with unpredictable traffic patterns or for development and testing environment
+
+    - consumption based, unpredictable cost, autoscaling, cost effective.
+
+Azure DataFlow -> A cloud based data trasnformation service
+    - is a cloud based data trasnformation service that allows you to visually design and manage data 
+        trasnformation workflows.
+    - key component of azure data factory and provides a scalable, secure and reliable way to transform and 
+        prepare data for analytics and reporting.
+
+    - visual data transformation, data preparation, data integration, scalability, security
+
+    - Types of transformation in azure DataFlow
+        - source , sink, aggregation, join
+
+
+Azure Synapse Analytics
+    - a cloud based analytics service that provides a unified platform for data integration, data warehousing,
+        and big data analytics.
+    
+    - Architecture of Azure Synapse Analytics
+        - Workspace, data lake, data warehouse, apache spark pools, sql pool, data integration
+
+
+Azure Databricks
+    - a fast, easy and collaborative apache spark based analytics platform that provides a comprehensive and 
+        scalable environment for data Engineering, data science and data analytics.
+    - apache spark, collaborative environment, scalability
+
+
+Data Ingestion: A Comprehensive Overview of Azure Services
+    Data ingestion is the process of collecting, processing, and storing data from various sources. Azure 
+    provides a range of services to facilitate data ingestion, including Azure Data Factory (ADF), Azure Synapse 
+    Analytics, Azure Databricks, Event Grid, and Event Hubs. In this explanation, we'll delve into each of 
+    these services and their roles in data ingestion.
+
+Azure Data Factory (ADF)
+    Azure Data Factory (ADF) is a cloud-based data integration service that allows you to create, schedule, 
+    and manage data pipelines. ADF supports a wide range of data sources and destinations, including Azure Blob 
+    Storage, Azure Data Lake Storage, Azure SQL Database, and on-premises data sources.
+
+    Key Features of ADF:
+        - Data Ingestion: ADF provides a scalable and secure way to ingest data from various sources.
+        - Data Transformation: ADF provides a range of data transformation activities, including data mapping, 
+            data conversion, and data aggregation.
+        - Data Loading: ADF provides a range of data loading activities, including bulk loading, incremental 
+            loading, and delta loading.
+
+Azure Synapse Analytics
+    Azure Synapse Analytics is a cloud-based analytics service that provides a unified platform for data 
+    integration, data warehousing, and big data analytics. Synapse Analytics supports a wide range of data 
+    sources and destinations, including Azure Blob Storage, Azure Data Lake Storage, Azure SQL Database, 
+    and on-premises data sources.
+
+    Key Features of Synapse Analytics:
+        - Data Ingestion: Synapse Analytics provides a scalable and secure way to ingest data from various 
+            sources.
+        - Data Integration: Synapse Analytics provides a range of data integration activities, including data 
+            mapping, data conversion, and data aggregation.
+        - Data Warehousing: Synapse Analytics provides a range of data warehousing activities, including data 
+            modeling, data governance, and data quality.
+
+Azure Databricks
+    Azure Databricks is a cloud-based analytics platform that provides a fast, easy, and collaborative 
+    Apache Spark-based analytics environment. Databricks supports a wide range of data sources and destinations,
+    including Azure Blob Storage, Azure Data Lake Storage, Azure SQL Database, and on-premises data sources.
+
+    Key Features of Databricks:
+        - Data Ingestion: Databricks provides a scalable and secure way to ingest data from various sources.
+        - Data Transformation: Databricks provides a range of data transformation activities, including data 
+            mapping, data conversion, and data aggregation.
+        - Data Analytics: Databricks provides a range of data analytics activities, including data modeling, 
+            data governance, and data quality.
+
+Event Grid
+    Event Grid is a cloud-based event routing service that allows you to easily manage events from various 
+    sources. Event Grid supports a wide range of event sources, including Azure Blob Storage, Azure Data Lake 
+    Storage, Azure SQL Database, and on-premises event sources.
+
+    Key Features of Event Grid:
+        - Event Ingestion: Event Grid provides a scalable and secure way to ingest events from various sources.
+        - Event Routing: Event Grid provides a range of event routing activities, including event filtering, 
+            event transformation, and event delivery.
+        - Event Handling: Event Grid provides a range of event handling activities, including event processing,
+            event storage, and event analytics.
+
+Event Hubs
+    Event Hubs is a cloud-based event ingestion service that allows you to easily collect, process, and 
+    analyze events from various sources. Event Hubs supports a wide range of event sources, including Azure 
+    Blob Storage, Azure Data Lake Storage, Azure SQL Database, and on-premises event sources.
+
+    Key Features of Event Hubs:
+        - Event Ingestion: Event Hubs provides a scalable and secure way to ingest events from various sources.
+        - Event Processing: Event Hubs provides a range of event processing activities, including event 
+            filtering, event transformation, and event aggregation.
+        - Event Storage: Event Hubs provides a range of event storage activities, including event buffering,
+            event caching, and event archiving.
+
+In conclusion, Azure provides a range of services to facilitate data ingestion, including Azure Data Factory 
+(ADF), Azure Synapse Analytics, Azure Databricks, Event Grid, and Event Hubs. By understanding the key features
+ and capabilities of each service, you can choose the best solution for your data ingestion needs.
